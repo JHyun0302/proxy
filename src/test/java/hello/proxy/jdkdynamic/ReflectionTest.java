@@ -3,7 +3,6 @@ package hello.proxy.jdkdynamic;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 @Slf4j
@@ -33,6 +32,7 @@ public class ReflectionTest {
         //클래스 정보
         Class classHello = Class.forName("hello.proxy.jdkdynamic.ReflectionTest$Hello");
         /**
+         * 리플렉션 적용 후
          * .getMethod()를 사용해서 Method로 대체됨!
          */
         Hello target = new Hello();
@@ -43,7 +43,7 @@ public class ReflectionTest {
 
         //callA 메서드 정보
         Method methodCallB = classHello.getMethod("callB");
-        Object result2 = methodCallA.invoke(target);
+        Object result2 = methodCallB.invoke(target);
         log.info("result2={}", result2);
     }
 
@@ -51,7 +51,7 @@ public class ReflectionTest {
     void reflection2() throws Exception {
         /**
          * 리플렉션 적용 후
-         * 클래스의 메타 정보 & 인터턴스 객체의 메타정보를 바탕으로 추상화 & 공통으로 묶어서 처리!
+         * 클래스의 메타 정보 & 인스턴스 객체의 메타정보를 바탕으로 추상화 & 공통으로 묶어서 처리!
          */
         //클래스 정보
         Class classHello = Class.forName("hello.proxy.jdkdynamic.ReflectionTest$Hello");
