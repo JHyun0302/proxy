@@ -9,6 +9,7 @@ import org.springframework.cglib.proxy.Enhancer;
 @Slf4j
 public class CglibTest {
     /**
+     * CGLIB 적용(인터페이스 없는 경우)
      * CGLIB 런타임 객체 의존 관계
      * client   --->   cglib proxy   --->   TimeMethodInterceptor   --->   target
      *         call()             interceptor()             methodProxy.invoke-call()
