@@ -7,6 +7,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
+ * JDK 동적 프록시 적용(인터페이스 있는 경우)
  * 동적 프록시를 app에 적용
  */
 public class LogTraceBasicHandler implements InvocationHandler {
