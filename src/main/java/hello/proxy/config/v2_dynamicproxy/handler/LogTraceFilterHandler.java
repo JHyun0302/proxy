@@ -8,6 +8,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
+ * JDK 동적 프록시 적용(인터페이스 있는 경우)
  * no-log 실행시 동적 프록시 적용 X
  */
 public class LogTraceFilterHandler implements InvocationHandler {
